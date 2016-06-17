@@ -1,0 +1,22 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural
+
+\f0\fs24 \cf0 Overview:\
+\
+This code/application purpose is to take a user provided search string and give them the rating of the first ten product recommendations based on that search string. The code first works by asking the user what item they would like to search for. The code then takes that string and uses it as the item query to access the Walmart Open Search API. This then accesses the json format of the search. The json format is then parsed through to retrieve the item ID for the search string. That item ID is then used to access the Walmart Open Product Recommendation API. This produces a json format of the first 10 product recommendations for that search. The product recommendations json is then parsed through to return the specific item ID for each of the 10 recommended products. These 10 item ID numbers are then each separately used to access a function called Reviews.The Reviews function takes the Item ID which is passed through and uses that to then access the Walmart Open Reviews API. This API produces a json of the Item reviews from the Walmart website. This review json is then parsed to find the items name and the average overall rating from each of the submitted reviews. The average overall rating is then returned and displayed giving the user each rating for each item.\
+\
+Instructions:\
+\
+When running the API.java program the user will be asked what item they would like to lookup. They will then input the string and press enter. The output screen will then display the 10 recommended products along with their average overall rating.\
+\
+When running the WalmartRec.java program the user will be directed to the screen where they will be able to type their desired search item in the textfield. After pressing the sunlit button they will be brought to another page where the 10 recommended product ID\'92s will be displayed. The user will then be able to press the Rate button which will retrieve the average overall rating for each item along with the name of each item.\
+\
+Bugs/Errors:\
+\
+Not all search strings return the actual Product Recommendation Item IDs.\
+\
+Not all of the Product Recommendations Item IDs produce the average overall rating.\
+}
